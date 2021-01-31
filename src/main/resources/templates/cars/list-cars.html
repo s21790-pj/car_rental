@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Cars</title>
+<body>
+
+<div class="container">
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Manufacture Year</th>
+            <th>Motor</th>
+            <th>Gearbox</th>
+            <th>Body Configuration</th>
+            <th>Color</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="tempCar : ${cars}">
+
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
+
+</body>
+</html>
