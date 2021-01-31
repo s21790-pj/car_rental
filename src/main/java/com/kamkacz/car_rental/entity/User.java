@@ -7,7 +7,7 @@ import java.util.Collection;
 @Table(name = "user")
 public class User {
 
-    // define fileds
+    // define fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -107,7 +107,8 @@ public class User {
     }
 
     public void setRoles(Collection<Role> roles) {
-        this.roles = roles;
+        this.roles =
+                roles;
     }
 
     @Override

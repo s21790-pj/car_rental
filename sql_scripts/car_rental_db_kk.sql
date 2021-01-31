@@ -39,9 +39,9 @@ VALUES ('ROLE_CUSTOMER'),
        ('ROLE_ADMIN');
 
 
-DROP TABLE IF EXISTS 'users_roles';
+DROP TABLE IF EXISTS users_roles;
 
-CREATE TABLE 'users_roles'
+CREATE TABLE users_roles
 (
     user_id int(11) NOT NULL,
     role_id int(11) NOT NULL,
@@ -54,3 +54,36 @@ CREATE TABLE 'users_roles'
     FOREIGN KEY (role_id) REFERENCES role (id)
         ON DELETE NO ACTION ON UPDATE NO ACTION
 );
+
+DROP TABLE IF EXISTS car;
+
+CREATE TABLE car
+(
+    id                 int(11)     NOT NULL AUTO_INCREMENT,
+    brand              varchar(50) NOT NULL,
+    model              varchar(50) NOT NULL,
+    manufacture_year   char(4)     NOT NULL,
+    motor              varchar(50) NOT NULL,
+    gearbox            varchar(50) NOT NULL,
+    body_configuration varchar(50) NOT NULL,
+    color              varchar(50) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
