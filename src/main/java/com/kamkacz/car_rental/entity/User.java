@@ -7,11 +7,10 @@ import java.util.Collection;
 @Table(name = "user")
 public class User {
 
-    // define fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Long id;
 
     @Column(name = "username")
     private String userName;
@@ -45,7 +44,8 @@ public class User {
         this.email = email;
     }
 
-    public User(String userName, String password, String firstName, String lastName, String email, Collection<Role> roles) {
+    public User(String userName, String password, String firstName, String lastName, String email,
+                Collection<Role> roles) {
         this.userName = userName;
         this.password = password;
         this.firstName = firstName;
@@ -54,11 +54,11 @@ public class User {
         this.roles = roles;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -107,8 +107,7 @@ public class User {
     }
 
     public void setRoles(Collection<Role> roles) {
-        this.roles =
-                roles;
+        this.roles = roles;
     }
 
     @Override
@@ -116,7 +115,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + "*********" + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
