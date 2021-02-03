@@ -33,6 +33,20 @@ public class Car {
     @Column(name = "color")
     private String color;
 
+    public Car() {
+    }
+
+    public Car(int id, String brand, String model, String manufactureYear, String motor, String gearbox, String bodyConfiguration, String color) {
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+        this.manufactureYear = manufactureYear;
+        this.motor = motor;
+        this.gearbox = gearbox;
+        this.bodyConfiguration = bodyConfiguration;
+        this.color = color;
+    }
+
     public Car(String brand, String model, String manufactureYear, String motor, String gearbox, String bodyConfiguration, String color) {
         this.brand = brand;
         this.model = model;
