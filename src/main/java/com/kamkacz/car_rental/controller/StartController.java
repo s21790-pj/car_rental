@@ -28,4 +28,9 @@ public class StartController {
 
         return "home";
     }
+
+    @GetMapping("/managementChoice")
+    public String test() {
+        return "management-choice";
+    }
 }

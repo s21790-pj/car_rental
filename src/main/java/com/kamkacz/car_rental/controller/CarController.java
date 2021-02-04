@@ -4,10 +4,7 @@ import com.kamkacz.car_rental.entity.Car;
 import com.kamkacz.car_rental.service.CarService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -59,7 +56,7 @@ public class CarController {
         return "/cars/car-form";
     }
 
-    @GetMapping("/save")
+    @PostMapping("/save")
     public String saveCar(@ModelAttribute("car") Car theCar) {
 
         // save the car

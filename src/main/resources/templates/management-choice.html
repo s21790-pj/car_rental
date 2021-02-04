@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Management choice</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="font-weight-bold">
+        User: <span sec:authentication="name"></span>
+        <br>
+        Role(s): <span sec:authentication="principal.authorities"></span>
+        <br><br>
+    </div>
+    <div class="row align-items-center">
+        <div class="col">
+            <a th:href="@{/cars/list}"
+               class="btn btn-info btn-lg">
+                Car management
+            </a>
+        </div>
+        <div class="col">
+            <a th:href="@{/users/list}"
+               class="btn btn-danger btn-lg">
+                User management
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
