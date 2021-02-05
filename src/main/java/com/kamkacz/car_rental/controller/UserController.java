@@ -58,10 +58,20 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public String saveUser(@ModelAttribute("user") CrmUser crmUser) {
+    public String save(@ModelAttribute("user") CrmUser crmUser) {
 
         // save the user
         userService.save(crmUser);
+
+        // use a redirect to prevent duplicate submissions
+        return "redirect:/users/list";
+    }
+
+    @PostMapping("/saveUser")
+    public String saveUser(@ModelAttribute("user") User theUser) {
+
+        // save the user
+        userService.saveUser(theUser);
 
         // use a redirect to prevent duplicate submissions
         return "redirect:/users/list";

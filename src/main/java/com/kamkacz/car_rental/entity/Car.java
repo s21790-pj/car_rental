@@ -33,10 +33,14 @@ public class Car {
     @Column(name = "color")
     private String color;
 
+    @Column(name = "city_id")
+    private int cityId;
+
+
     public Car() {
     }
 
-    public Car(int id, String brand, String model, String manufactureYear, String motor, String gearbox, String bodyConfiguration, String color) {
+    public Car(int id, String brand, String model, String manufactureYear, String motor, String gearbox, String bodyConfiguration, String color, int cityId) {
         this.id = id;
         this.brand = brand;
         this.model = model;
@@ -45,9 +49,10 @@ public class Car {
         this.gearbox = gearbox;
         this.bodyConfiguration = bodyConfiguration;
         this.color = color;
+        this.cityId = cityId;
     }
 
-    public Car(String brand, String model, String manufactureYear, String motor, String gearbox, String bodyConfiguration, String color) {
+    public Car(String brand, String model, String manufactureYear, String motor, String gearbox, String bodyConfiguration, String color, int cityId) {
         this.brand = brand;
         this.model = model;
         this.manufactureYear = manufactureYear;
@@ -55,7 +60,9 @@ public class Car {
         this.gearbox = gearbox;
         this.bodyConfiguration = bodyConfiguration;
         this.color = color;
+        this.cityId = cityId;
     }
+
 
     public int getId() {
         return id;
@@ -121,6 +128,14 @@ public class Car {
         this.color = color;
     }
 
+    public int getCityId() {
+        return cityId;
+    }
+
+    public void setCityId(int cityId) {
+        this.cityId = cityId;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -132,6 +147,7 @@ public class Car {
                 ", gearbox='" + gearbox + '\'' +
                 ", bodyConfiguration='" + bodyConfiguration + '\'' +
                 ", color='" + color + '\'' +
+                ", cityId=" + cityId +
                 '}';
     }
 }

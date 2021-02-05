@@ -11,4 +11,5 @@ public interface CarRepository extends JpaRepository<Car, Integer> {
     List<Car> findAllByOrderByBrandAsc();
 
     List<Car> findByBrandContainsOrModelContainsAllIgnoreCase(String brand, String model);
+
 }
