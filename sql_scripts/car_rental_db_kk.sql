@@ -27,7 +27,8 @@ INSERT INTO user(username, password, first_name, last_name, email)
 VALUES ('heksa', '$2a$10$KQr4Q1KUygptEtkaMUMmVuuVTSEIFsHkSdDw1R0zsnH9mul0Tpe0e', 'Heksa', 'TheDog', 'heksa@dog.com'),
        ('kamil', '$2a$10$KQr4Q1KUygptEtkaMUMmVuuVTSEIFsHkSdDw1R0zsnH9mul0Tpe0e', 'Kamil', 'Smith', 'kamil@gmail.com'),
        ('pawel', '$2a$10$KQr4Q1KUygptEtkaMUMmVuuVTSEIFsHkSdDw1R0zsnH9mul0Tpe0e', 'Paweł', 'Brick', 'pawel@gmail.com'),
-       ('marian', '$2a$10$KQr4Q1KUygptEtkaMUMmVuuVTSEIFsHkSdDw1R0zsnH9mul0Tpe0e', 'Jakub', 'Butter', 'marian@gmail.com');
+       ('marian', '$2a$10$KQr4Q1KUygptEtkaMUMmVuuVTSEIFsHkSdDw1R0zsnH9mul0Tpe0e', 'Jakub', 'Butter',
+        'marian@gmail.com');
 
 --
 -- Table structure for table role

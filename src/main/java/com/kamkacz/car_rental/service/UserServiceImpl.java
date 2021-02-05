@@ -6,6 +6,8 @@ import com.kamkacz.car_rental.entity.Role;
 import com.kamkacz.car_rental.entity.User;
 import com.kamkacz.car_rental.repository.UserRepository;
 import com.kamkacz.car_rental.user.CrmUser;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -93,6 +95,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Cascade(CascadeType.DELETE)
     public void deleteById(int theId) {
         userRepository.deleteById(theId);
     }
