@@ -51,7 +51,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
     public void save(CrmUser crmUser) {
         User user = new User();
         // assign user details to the user object
@@ -115,7 +114,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         User user = userDao.findByUserName(userName);
         if (user == null) {
